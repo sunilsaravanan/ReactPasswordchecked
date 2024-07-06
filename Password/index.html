@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Visibility</title>
+  </head>
+  <body>
+    <div class="input-pass">
+      <input type="password" id="password" />
+      <img src="./eye-icons/eye-close.png" id="img" onclick="show()" />
+      <link rel="stylesheet" href="./style.css">
+    </div>
+    <script>
+      let password = document.getElementById("password");
+      let image = document.getElementById("img");
+
+      const show = () => {
+        if (password.type == "password") {
+          password.type = "text";
+          image.src = "./eye-icons/eye-open.png";
+        } else {
+          password.type = "password";
+          image.src = "./eye-icons/eye-close.png";
+        }
+      };
+    </script>
+  </body>
+</html>
